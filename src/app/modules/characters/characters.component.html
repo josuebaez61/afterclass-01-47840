@@ -1,0 +1,12 @@
+<div class="row gy-3">
+  <div *ngFor="let character of characters;" class="col-4">
+    <app-bs-card
+      (onClick)="onClickCard($event, character)"
+      [clickable]="true"
+      [severity]="character.status === 'Alive' ? 'success' : 'danger'"
+      [title]="character.name"
+      [img]="character.image"
+    >
+    </app-bs-card>
+  </div>
+</div>
